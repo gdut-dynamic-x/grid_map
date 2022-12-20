@@ -30,7 +30,7 @@ jobs:
     - name: System deps
       run: |
         apt-get update
-        apt-get install -y git libeigen3-dev ninja-build
+        DEBIAN_FRONTEND=noninteractive apt-get install -y git libeigen3-dev ninja-build keyboard-configuration
 
     - uses: actions/checkout@v2
       with: 
